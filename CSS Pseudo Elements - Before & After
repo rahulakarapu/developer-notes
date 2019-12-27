@@ -1,1 +1,38 @@
+The pseudo elements before and after allow you to add extra stylings to your web pages without adding extra mark up. Everything's done using CSS.
+You must use the content property which is set to none by default.
 
+Misconceptions: 
+1. That the content is literally added before/after the element(against which the pseudo elements are added) in the DOM.
+Explanation - The content "IS" part of the element against which the pseudo elements are added.
+
+Points to remember:
+1. To write the before/after for an element, for ex: the paragraph element <p>, you could do it as follows:
+   p::before {
+    your CSS goes here
+   }
+   p::after {
+    your CSS goes here
+   }
+2. Notice the '::', this is the CSS3 standard for using the pseudo elements. ':' is used for pseudo class.
+3. Pseudo elements will not work on images. However your content for a pseudo element could contain and image. content: 'url(image)';
+
+Advantages:
+1. You don't really have to add div elements only for designing. Instead you could use the pseudo elements before and after.
+
+Using the content property:
+1. To display an image before/after the element.
+   Ex: p::before {
+        content: 'image';
+       }
+2. To display quotes.
+   Ex: p::before {
+        content: 'open-quote'
+       }
+       p::after {
+        content: 'close-quote'
+       }
+
+To be added:
+1. Code snippets!!
+  a. For the basic understanding of pseudo elements
+  b. How to use the content property for designing
